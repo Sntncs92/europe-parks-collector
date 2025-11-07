@@ -1,0 +1,27 @@
+# Archivos de datos
+data/
+*.csv
+
+# Archivos de logs
+logs/
+*.log
+
+# Configuración sensible
+config/*.json
+
+# Entornos virtuales
+venv/
+.env/
+
+# Archivos temporales o de caché
+__pycache__/
+*.pyc
+*.pyo
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de backup o prueba
+*.bak
+*.tmp
