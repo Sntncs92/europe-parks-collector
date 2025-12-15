@@ -20,8 +20,9 @@ print("🚀 Iniciando colector de datos...\n")
 parques = cargar_parques(CONFIG_PATH)
 
 # ---------------------------------------------------------------
-# Obtener horas de cierre de cada parque
+# Obtener horas de apertura y cierre
 # ---------------------------------------------------------------
+aperturas = {}
 cierres = {}
 
 for parque in parques:
@@ -32,11 +33,12 @@ for parque in parques:
     hoy = datetime.now(zona).date().isoformat()
     apertura, cierre = obtener_horario(parque["entity_id"], hoy)
 
-    if cierre:
+    if apertura and cierre:
+        aperturas[nombre] = apertura
         cierres[nombre] = cierre
-        print(f"🕓 {nombre} cierra hoy a las {cierre.astimezone(zona).strftime('%H:%M')}")
+        print(f"🕓 {nombre}: abre a las {apertura.astimezone(zona).strftime('%H:%M')} y cierra a las {cierre.astimezone(zona).strftime('%H:%M')}")
     else:
-        print(f"⚠️ No se pudo determinar hora de cierre de {nombre}")
+        print(f"⚠️ No se pudo determinar horario de {nombre}")
 
 print()
 
@@ -66,11 +68,16 @@ while True:
         zona = pytz.timezone(timezone)
         ahora_local = datetime.now(zona)
 
-        # Sin horario → no se recoge
-        if nombre not in cierres:
+        # Parques sin horarios → se saltan
+        if nombre not in aperturas or nombre not in cierres:
             continue
 
-        # Parque cerrado
+        # Antes de la apertura
+        if ahora_local < aperturas[nombre]:
+            print(f"⏳ {nombre} aún no ha abierto.")
+            continue
+
+        # Después del cierre
         if ahora_local >= cierres[nombre]:
             print(f"⏹️  {nombre} ya ha cerrado.")
             continue
