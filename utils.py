@@ -1,57 +1,73 @@
 import json
 import os
+import csv
 import requests
 from datetime import datetime
 import pytz
-import csv
 
 BASE_URL = "https://api.themeparks.wiki/v1/entity"
 
 
 # ---------------------------------------------------------------
-# Cargar parques desde el JSON
+# Cargar parques desde JSON
 # ---------------------------------------------------------------
 def cargar_parques(config_path):
     with open(config_path, "r", encoding="utf-8") as file:
-        return json.load(file)
+        parques = json.load(file)
+    return parques
 
 
 # ---------------------------------------------------------------
-# Obtener horario del parque
+# Obtener horario de apertura y cierre
 # ---------------------------------------------------------------
-def obtener_horario(entity_id, hoy):
+def obtener_horario(entity_id, fecha_iso):
+    """
+    Devuelve (apertura, cierre) como datetime con timezone
+    o (None, None) si no hay horario válido
+    """
     schedule_url = f"{BASE_URL}/{entity_id}/schedule"
 
     try:
-        response = requests.get(schedule_url)
+        response = requests.get(schedule_url, timeout=10)
         response.raise_for_status()
         data = response.json()
 
         horarios = data.get("schedule", [])
-        horario_hoy = next(
-            (h for h in horarios if h["date"] == hoy and h.get("type") == "OPERATING"),
+
+        horario_dia = next(
+            (
+                h for h in horarios
+                if h.get("date") == fecha_iso
+                and h.get("type") == "OPERATING"
+            ),
             None
         )
 
-        if horario_hoy:
-            apertura = horario_hoy.get("openingTime")
-            cierre = horario_hoy.get("closingTime")
+        if not horario_dia:
+            return None, None
 
-            if apertura and cierre:
-                return (
-                    datetime.fromisoformat(apertura),
-                    datetime.fromisoformat(cierre)
-                )
-    except:
-        pass
+        apertura = horario_dia.get("openingTime")
+        cierre = horario_dia.get("closingTime")
 
-    return (None, None)
+        if apertura and cierre:
+            return (
+                datetime.fromisoformat(apertura),
+                datetime.fromisoformat(cierre)
+            )
+
+    except Exception as e:
+        print(f"⚠️ Error obteniendo horario ({entity_id}): {e}")
+
+    return None, None
 
 
 # ---------------------------------------------------------------
-# Detectar si hay un evento activo en el parque
+# Detectar evento activo
 # ---------------------------------------------------------------
 def detectar_evento(parque, fecha):
+    """
+    Devuelve el nombre del evento activo o ""
+    """
     for evento in parque.get("eventos", []):
         desde = datetime.fromisoformat(evento["desde"]).date()
         hasta = datetime.fromisoformat(evento["hasta"]).date()
@@ -63,28 +79,29 @@ def detectar_evento(parque, fecha):
 
 
 # ---------------------------------------------------------------
-# Recoger datos del endpoint /live
+# Recoger datos en vivo y guardarlos en CSV
 # ---------------------------------------------------------------
-def recoger_datos(parque, evento_activo, ahora):
+def recoger_datos(parque, evento_activo, ahora_local):
     nombre = parque["name"]
     entity_id = parque["entity_id"]
+    timezone = parque["timezone"]
+    zona = pytz.timezone(timezone)
 
     live_url = f"{BASE_URL}/{entity_id}/live"
 
-    # Archivo CSV
-    nombre_archivo = f"{nombre.replace(' ', '')}_{ahora.date().isoformat()}.csv"
+    # Nombre de archivo por parque y día
+    nombre_archivo = f"{nombre.replace(' ', '_')}_{ahora_local.date().isoformat()}.csv"
     ruta_archivo = os.path.join("data", nombre_archivo)
-    os.makedirs("data", exist_ok=True)
 
+    os.makedirs("data", exist_ok=True)
     archivo_existe = os.path.isfile(ruta_archivo)
 
     try:
-        response_live = requests.get(live_url)
-        response_live.raise_for_status()
-        data_live = response_live.json()
+        response = requests.get(live_url, timeout=10)
+        response.raise_for_status()
+        data = response.json()
 
-        atracciones = data_live.get("liveData", [])
-
+        atracciones = data.get("liveData", [])
         if not atracciones:
             print(f"⚠️  No se encontraron atracciones en {nombre}")
             return 0, ruta_archivo
@@ -92,41 +109,40 @@ def recoger_datos(parque, evento_activo, ahora):
         with open(ruta_archivo, mode="a", newline="", encoding="utf-8") as csvfile:
             writer = csv.writer(csvfile)
 
-            # Encabezado
             if not archivo_existe:
                 writer.writerow([
-                    "timestamp", "weekday", "ride_id", "ride_name",
-                    "status", "wait_time", "evento"
+                    "timestamp",
+                    "weekday",
+                    "ride_id",
+                    "ride_name",
+                    "status",
+                    "wait_time",
+                    "evento"
                 ])
 
-            total_atracciones = 0
+            total = 0
 
             for ride in atracciones:
                 if ride.get("entityType") != "ATTRACTION":
                     continue
 
-                total_atracciones += 1
-
-                ride_id = ride.get("id", "")
-                ride_name = ride.get("name", "")
-                status = ride.get("status", "")
-                wait_time = ride.get("queue", {}).get("STANDBY", {}).get("waitTime", "")
-
-                weekday = ahora.strftime("%A")
+                total += 1
 
                 writer.writerow([
-                    ahora.isoformat(),
-                    weekday,
-                    ride_id,
-                    ride_name,
-                    status,
-                    wait_time,
+                    ahora_local.isoformat(),
+                    ahora_local.strftime("%A"),
+                    ride.get("id", ""),
+                    ride.get("name", ""),
+                    ride.get("status", ""),
+                    ride.get("queue", {})
+                        .get("STANDBY", {})
+                        .get("waitTime", ""),
                     evento_activo
                 ])
 
-        print(f"  ✅ {nombre}: {total_atracciones} atracciones registradas")
-        return total_atracciones, ruta_archivo
+        print(f"  ✅ {nombre}: {total} atracciones registradas")
+        return total, ruta_archivo
 
     except Exception as e:
-        print(f"  ❌ Error al obtener datos de {nombre}: {e}")
+        print(f"  ❌ Error al recoger datos de {nombre}: {e}")
         return 0, ruta_archivo
