@@ -21,6 +21,7 @@ print("🚀 Iniciando colector de datos 24/7 global...\n")
 parques = cargar_parques(CONFIG_PATH)
 
 # ---------------------------------------------------------------
+
 # Inicializar cache de horarios por parque
 # ---------------------------------------------------------------
 horarios_cache = {}
@@ -31,6 +32,29 @@ for parque in parques:
         "cierre": None,
         "last_collected": None
     }
+
+# Obtener horas de apertura y cierre
+# ---------------------------------------------------------------
+aperturas = {}
+cierres = {}
+
+for parque in parques:
+    nombre = parque["name"]
+    timezone = parque["timezone"]
+    zona = pytz.timezone(timezone)
+
+    hoy = datetime.now(zona).date().isoformat()
+    apertura, cierre = obtener_horario(parque["entity_id"], hoy)
+
+    if apertura and cierre:
+        aperturas[nombre] = apertura
+        cierres[nombre] = cierre
+        print(f"🕓 {nombre}: abre a las {apertura.astimezone(zona).strftime('%H:%M')} y cierra a las {cierre.astimezone(zona).strftime('%H:%M')}")
+    else:
+        print(f"⚠️ No se pudo determinar horario de {nombre}")
+
+print()
+
 
 # ---------------------------------------------------------------
 # Resumen por parque
@@ -48,6 +72,7 @@ while True:
         timezone = parque["timezone"]
         zona = pytz.timezone(timezone)
         ahora_local = datetime.now(zona)
+
 
         # --- Actualizar horarios si es un nuevo día ---
         cache = horarios_cache[nombre]
@@ -71,6 +96,20 @@ while True:
         # --- Antes de apertura ---
         if ahora_local < cache["apertura"]:
             print(f"⏳ {nombre} aún no ha abierto.")
+
+        # Parques sin horarios → se saltan
+        if nombre not in aperturas or nombre not in cierres:
+            continue
+
+        # Antes de la apertura
+        if ahora_local < aperturas[nombre]:
+            print(f"⏳ {nombre} aún no ha abierto.")
+            continue
+
+        # Después del cierre
+        if ahora_local >= cierres[nombre]:
+            print(f"⏹️  {nombre} ya ha cerrado.")
+
             continue
 
         # --- Después de cierre ---
@@ -97,8 +136,18 @@ while True:
     # --- Esperar 10 minutos antes de volver a revisar ---
     time.sleep(600)
 
+
     # Opcional: imprimir resumen temporal
     print("\n📊 Resumen temporal:")
     for nombre, info in resumen_parques.items():
         print(f"🎢 {nombre}: {info['registros']} registros → {info['archivo'] if info['archivo'] else 'Ninguno'}")
     print("-" * 40)
+
+for nombre, info in resumen_parques.items():
+    if info["registros"] > 0:
+        print(f"🎢 {nombre}: {info['registros']} registros → {info['archivo']}")
+    else:
+        print(f"🎢 {nombre}: sin datos guardados")
+
+print("=" * 40)
+print("✅ Recolección completada con éxito.")
