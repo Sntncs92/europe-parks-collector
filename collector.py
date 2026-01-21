@@ -2,6 +2,8 @@ import os
 import time
 from datetime import datetime
 import pytz
+from utils.logger import setup_logger
+
 
 from utils.config_loader import cargar_parques
 from utils.event_detector import detectar_evento
@@ -11,6 +13,7 @@ from collectors.live_client import get_live_data
 from collectors.data_parser import parse_live_data
 from collectors.csv_writer import save_to_csv
 
+logger = setup_logger()
 CONFIG_PATH = os.path.join("config", "parks.json")
 INTERVALO_SEGUNDOS = 15 * 60
 
@@ -88,7 +91,7 @@ while True:
 
         cache["last_collected"] = ahora_local
 
-        print(f"✅ {nombre}: {nuevos} registros")
+        logger.info(f"✅ {nombre}: {nuevos} registros")
 
     # Espera
     time.sleep(600)

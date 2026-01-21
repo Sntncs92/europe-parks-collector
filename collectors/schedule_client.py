@@ -1,5 +1,7 @@
 import requests
 from datetime import datetime
+from utils.logger import setup_logger
+logger = setup_logger()
 
 BASE_URL = "https://api.themeparks.wiki/v1/entity"
 
@@ -39,6 +41,6 @@ def obtener_horario(entity_id, fecha_iso):
             )
 
     except Exception as e:
-        print(f"⚠️ Error obteniendo horario ({entity_id}): {e}")
+        logger.info(f"⚠️ Error obteniendo horario ({entity_id}): {e}")
 
     return None, None
