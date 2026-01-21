@@ -8,7 +8,7 @@ def save_to_csv(nombre_parque, filas, ahora_local, continent, country):
     ruta_carpeta = os.path.join("data", "raw", continent, country, nombre_parque.replace(" ", "_"))
     os.makedirs(ruta_carpeta, exist_ok=True)
 
-    nombre_archivo = f"{ahora_local.date().isoformat()}.csv"
+    nombre_archivo = f"{nombre_parque.replace(' ', '_')}_{ahora_local.date().isoformat()}.csv"
     ruta_archivo = os.path.join(ruta_carpeta, nombre_archivo)
 
     archivo_existe = os.path.isfile(ruta_archivo)
