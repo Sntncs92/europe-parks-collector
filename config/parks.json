@@ -1,0 +1,991 @@
+[
+  {
+    "slug": "phantasialand",
+    "name": "Phantasialand",
+    "entity_id": "abb67808-61e3-49ef-996c-1b97ed64fac6",
+    "continent": "Europe",
+    "country":"Germany",
+    "city":"Brühl",
+    "timezone": "Europe/Berlin",
+    "operator":"Independent",
+    "status":"active",
+    "eventos": [
+      {
+        "nombre": "Wintertraum (Navidad)",
+        "desde": "2025-11-15",
+        "hasta": "2025-01-25"
+      }
+    ]
+  },
+  {
+    "slug":"europapark",
+    "name": "Europa Park",
+    "entity_id": "639738d3-9574-4f60-ab5b-4c392901320b",
+    "continent":"Europe",
+    "country":"Germany",
+    "city":"Rust",
+    "timezone": "Europe/Berlin",
+    "operator":"Independent",
+    "status":"active",
+    "eventos": [
+      {
+        "nombre": "Traumatica (Halloween)",
+        "desde": "2025-09-24",
+        "hasta": "2025-11-08"
+      },
+      {
+        "nombre": "Oktoberfest",
+        "desde": "2025-09-19",
+        "hasta": "2025-10-11"
+      },
+      {
+        "nombre": "Winterzauber (Navidad)",
+        "desde": "2025-11-25",
+        "hasta": "2026-01-18"
+      },
+      {
+        "nombre": "Halloween",
+        "desde": "2026-09-26",
+        "hasta": "2026-11-01"
+      },
+      {
+        "nombre": "HALLOWinter",
+        "desde": "2026-11-02",
+        "hasta": "2026-11-27"
+      },
+      {
+        "nombre": "Winter Season",
+        "desde": "2026-11-28",
+        "hasta": "2027-01-09"
+      }
+    ]
+  },
+  {
+    "slug":"parcasterix",
+    "name": "Parc Asterix",
+    "entity_id": "9e938687-fd99-46f3-986a-1878210378f8",
+    "continent":"Europe",
+    "country":"France",
+    "city":"Paris",
+    "timezone": "Europe/Paris",
+    "operator":"Independent",
+    "status":"active",
+    "eventos": [
+      {
+        "nombre": "Peur sur le Parc (Halloween)",
+        "desde": "2025-10-04",
+        "hasta": "2025-11-10"
+      },
+      {
+        "nombre": "Noel Gaulois (Navidad)",
+        "desde": "2025-12-20",
+        "hasta": "2026-01-04"
+      },
+      {
+        "nombre": "Été Gaulois",
+        "desde": "2026-07-11",
+        "hasta": "2026-08-30"
+      },
+      {
+        "nombre": "Peur sur le Parc (Halloween)",
+        "desde": "2026-10-03",
+        "hasta": "2026-11-08"
+      },
+      {
+        "nombre": "Noël Gaulois (Navidad)",
+        "desde": "2026-12-19",
+        "hasta": "2027-01-03"
+      }
+    ]
+  },
+  {
+    "slug":"efteling",
+    "name": "Efteling",
+    "entity_id": "30713cf6-69a9-47c9-a505-52bb965f01be",
+    "continent":"Europe",
+    "country":"Netherlands",
+    "city":"Kaatsheuvel",
+    "operator":"Independent",
+    "status":"active",
+    "timezone": "Europe/Amsterdam",
+    "eventos":[]
+  },
+  {
+    "slug":"walibibelgium",
+    "name": "Walibi Belgium",
+    "entity_id": "21897ba2-cc63-460e-99b0-fcd4ca7c18ef",
+    "continent":"Europe",
+    "country":"Belgium",
+    "city":"Wavre",
+    "operator":"Compagnie des Alpes",
+    "status":"active",
+    "timezone": "Europe/Brussels",
+    "eventos": [
+      {
+        "nombre": "Halloween",
+        "desde": "2025-10-12",
+        "hasta": "2025-11-03"
+      },
+      {
+        "nombre": "Walibi Winter",
+        "desde": "2025-12-06",
+        "hasta": "2026-01-04"
+      },
+      {
+        "nombre": "50 years of Walibi",
+        "desde": "2026-07-07",
+        "hasta": "2026-08-31"
+      },
+      {
+        "nombre": "Halloween",
+        "desde": "2026-10-11",
+        "hasta": "2026-11-02"
+      }
+    ]
+  },
+  {
+    "slug":"walibiholland",
+    "name": "Wallibi Holland",
+    "entity_id": "18635b3e-fa23-4284-89dd-9fcd0aaa9c9c",
+    "continent":"Europe",
+    "country":"Netherlands",
+    "city":"Flevoland",
+    "operator":"Compagnie des Alpes",
+    "status":"active",
+    "timezone": "Europe/Amsterdam",
+    "eventos": [
+      {
+        "nombre": "Halloween",
+        "desde": "2025-10-12",
+        "hasta": "2025-11-03"
+      },
+      {
+        "nombre": "Bright Nights",
+        "desde": "2025-12-20",
+        "hasta": "2026-01-04"
+      }
+    ]
+  },
+  {
+    "slug":"portaventura",
+    "name": "PortAventura",
+    "entity_id": "32608bdc-b3fa-478e-a8c0-9dde197a4212",
+    "continent":"Europe",
+    "country":"Spain",
+    "city":"Tarragona",
+    "operator":"Port Aventura World",
+    "status":"active",
+    "timezone": "Europe/Madrid",
+    "eventos": [
+      {
+        "nombre": "Halloween",
+        "desde": "2025-09-20",
+        "hasta": "2025-11-11"
+      },
+      {
+        "nombre": "Navidad",
+        "desde": "2025-11-22",
+        "hasta": "2026-01-06"
+      },
+      {
+        "nombre": "Carnaval",
+        "desde": "2026-02-27",
+        "hasta": "2026-03-22"
+      },
+      {
+        "nombre": "Semana Santa",
+        "desde": "2026-04-05",
+        "hasta": "2026-04-27"
+      }
+    ]
+  },
+  {
+    "slug":"disneyparis",
+    "name": "Disneyland Paris",
+    "entity_id": "dae968d5-630d-4719-8b06-3d107e944401",
+    "continent":"Europe",
+    "country":"France",
+    "city":"Paris",
+    "operator":"Disney",
+    "status":"active",
+    "timezone": "Europe/Paris",
+    "eventos": [
+      {
+        "nombre": "Festival de Halloween",
+        "desde": "2025-10-01",
+        "hasta": "2025-11-02"
+      },
+      {
+        "nombre": "Navidad encantada Disney",
+        "desde": "2025-11-08",
+        "hasta": "2026-01-06"
+      },
+      {
+        "nombre": "Festival de Halloween",
+        "desde": "2026-09-26",
+        "hasta": "2026-11-01"
+      },
+      {
+        "nombre": "Navidad encantada Disney",
+        "desde": "2026-11-07",
+        "hasta": "2027-01-06"
+      }
+    ]
+  },
+  {
+    "slug":"warnermadrid",
+    "name": "Parque Warner Madrid",
+    "entity_id": "5adbd2f7-3694-4d23-aaec-4037a056573f",
+    "continent":"Europe",
+    "country":"Spain",
+    "city":"Madrid",
+    "operator":"Warner",
+    "status":"active",
+    "timezone": "Europe/Madrid",
+    "eventos": [
+      {
+        "nombre":"Halloween",
+        "desde": "2025-09-27",
+        "hasta": "2025-11-03"
+      },
+      {
+        "nombre": "Navidad",
+        "desde": "2025-12-01",
+        "hasta": "2026-01-06"
+      },
+      {
+        "nombre": "Mes de los Superheroes",
+        "desde": "2026-02-28",
+        "hasta": "2026-04-05"
+      }
+    ]
+  },
+  {
+    "slug":"altontowers",
+    "name": "Alton Towers",
+    "entity_id": "0d8ea921-37b1-4a9a-b8ef-5b45afea847b",
+    "continent":"Europe",
+    "country":"United Kingdom",
+    "city":"Stoke-on-Trent",
+    "operator":"Independent",
+    "status":"active",
+    "timezone": "Europe/London",
+    "eventos": [
+      {
+        "nombre": "Scarefest",
+        "desde": "2025-10-03",
+        "hasta": "2025-11-02"
+      },
+      {
+        "nombre": "Christmas",
+        "desde": "2025-11-28",
+        "hasta": "2026-01-04"
+      },
+      {
+        "nombre": "Alton After Dark",
+        "desde": "2026-03-14",
+        "hasta": "2026-03-28"
+      },
+      {
+        "nombre": "Scarefest",
+        "desde": "2026-09-26",
+        "hasta": "2026-11-01"
+      }
+    ]
+  },
+  {
+    "slug":"disneystudiosparis",
+    "name": "Disney Adventure World",
+    "entity_id": "ca888437-ebb4-4d50-aed2-d227f7096968",
+    "continent":"Europe",
+    "country":"France",
+    "city":"Paris",
+    "operator":"Disney",
+    "status":"active",
+    "timezone": "Europe/Paris",
+    "eventos": [
+      {
+        "nombre": "Festival de Halloween",
+        "desde": "2025-10-01",
+        "hasta": "2025-11-02"
+      },
+      {
+        "nombre": "Navidad encantada Disney",
+        "desde": "2025-11-08",
+        "hasta": "2026-01-06"
+      },
+      {
+        "nombre": "Festival de Halloween",
+        "desde": "2026-09-26",
+        "hasta": "2026-11-01"
+      },
+      {
+        "nombre": "Festival de Halloween",
+        "desde": "2026-09-26",
+        "hasta": "2026-11-01"
+      },
+      {
+        "nombre": "Navidad encantada Disney",
+        "desde": "2026-11-07",
+        "hasta": "2027-01-06"
+      }
+    ]
+  },
+  {
+    "slug":"liseberg",
+    "name": "Liseberg",
+    "entity_id": "93142d7e-024a-4877-9c72-f8e904a37c0c",
+    "continent":"Europe",
+    "country":"Sweden",
+    "city":"Gothenburg",
+    "operator":"Independent",
+    "status":"active",
+    "timezone": "Europe/Stockholm",
+    "eventos":[
+      {
+        "nombre": "Halloween",
+        "desde": "2025-10-03",
+        "hasta": "2025-11-03"
+      },
+      {
+        "nombre": "Jul på Liseberg (Navidad)",
+        "desde": "2025-11-15",
+        "hasta": "2025-12-30"
+      },
+      {
+        "nombre": "Kaninöppet",
+        "desde": "2025-12-31",
+        "hasta": "2026-01-07"
+      }
+    ]
+  },
+  {
+    "slug":"gardaland",
+    "name": "Gardaland",
+    "entity_id": "043211c0-76f2-4456-89f8-4001be01018d",
+    "continent":"Europe",
+    "country":"Italy",
+    "city":"Verona",
+    "operator":"Independent",
+    "status":"active",
+    "timezone": "Europe/Rome",
+    "eventos": [
+      {
+        "nombre": "Halloween",
+        "desde": "2025-10-03",
+        "hasta": "2025-11-02"
+      },
+      {
+        "nombre": "Gardaland Magic Winter (Navidad)",
+        "desde": "2025-12-06",
+        "hasta": "2026-01-06"
+      }
+    ]
+  },
+  {
+    "slug":"ferrariespaña",
+    "name": "Ferarri Land España",
+    "entity_id": "d06d91b8-7702-42c3-a8af-7d0161d471bf",
+    "continent":"Europe",
+    "country":"Spain",
+    "city":"Tarragona",
+    "operator":"Port Aventura World",
+    "status":"active",
+    "timezone": "Europe/Madrid",
+    "eventos": [
+      {
+        "nombre": "Halloween",
+        "desde": "2025-09-20",
+        "hasta": "2025-11-11"
+      },
+      {
+        "nombre": "Navidad",
+        "desde": "2025-11-22",
+        "hasta": "2026-01-06"
+      },
+      {
+        "nombre": "Carnaval",
+        "desde": "2026-02-27",
+        "hasta": "2026-03-22"
+      },
+      {
+        "nombre": "Semana Santa",
+        "desde": "2026-04-05",
+        "hasta": "2026-04-27"
+      }
+    ]
+  },
+  {
+    "slug":"sixflagsmexico",
+    "name": "Six Flags Mexico",
+    "entity_id": "d67e40f9-9c02-4bfe-8ee1-b714deda9906",
+    "continent":"South America",
+    "country":"Mexico",
+    "city":"Ciudad de Mexico",
+    "operator":"Six Flags",
+    "status":"active",
+    "timezone": "America/Mexico_City",
+    "eventos": [
+            {
+        "nombre": "Christmas in the Park",
+        "desde": "2025-11-17",
+        "hasta": "2026-01-18"
+      }
+    ]
+  },
+  {
+    "slug":"animalkingdom",
+    "name": "Animal Kingdom",
+    "entity_id": "1c84a229-8862-4648-9c71-378ddd2c7693",
+    "continent":"North America",
+    "country":"United States",
+    "city":"Orlando",
+    "operator":"Disney",
+    "status":"active",
+    "timezone": "America/New_York",
+    "eventos": [
+    ]
+  },
+  {
+    "slug":"disneytokyo",
+    "name": "Tokyo DisneyLand",
+    "entity_id": "3cc919f1-d16d-43e0-8c3f-1dd269bd1a42",
+    "continent":"Asia",
+    "country":"Japan",
+    "city":"Tokyo",
+    "operator":"Disney",
+    "status":"active",
+    "timezone": "Asia/Tokyo",
+    "eventos": [
+      {
+        "nombre":"Minnie's Funderland",
+        "desde":"2026-01-14",
+        "hasta":"2026-03-02"
+      },
+      {
+        "nombre":"Vanellope's Sweet Pop World",
+        "desde":"2026-04-09",
+        "hasta":"2026-06-30"
+      },
+      {
+        "nombre":"Fun Time with Toy Story 5",
+        "desde":"2026-07-02",
+        "hasta":"2026-09-14"
+      }
+    ]
+  },
+  {
+    "slug":"magickingdom",
+    "name": "Magic Kingdom",
+    "entity_id": "75ea578a-adc8-4116-a54d-dccb60765ef9",
+    "continent":"North America",
+    "country":"United States",
+    "city":"Orlando",
+    "operator":"Disney",
+    "status":"active",
+    "timezone": "America/New_York",
+    "eventos": [
+    ]
+  },
+  {
+    "slug":"epcot",
+    "name": "EPCOT",
+    "entity_id": "47f90d2c-e191-4239-a466-5892ef59a88b",
+    "continent":"North America",
+    "country":"United States",
+    "city":"Orlando",
+    "operator":"Disney",
+    "status":"active",
+    "timezone": "America/New_York",
+    "eventos": [
+    ]
+  },
+  {
+    "slug":"hollywoodstudios",
+    "name": "Disney's Hollywood Studios",
+    "entity_id": "288747d1-8b4f-4a64-867e-ea7c9b27bad8",
+    "continent":"North America",
+    "country":"United States",
+    "city":"Orlando",
+    "operator":"Disney",
+    "status":"active",
+    "timezone": "America/New_York",
+    "eventos": [
+    ]
+  },
+  {
+    "slug":"disneylandcalifornia",
+    "name": "Disneyland Park",
+    "entity_id": "7340550b-c14d-4def-80bb-acdb51d49a66",
+    "continent":"North America",
+    "country":"United States",
+    "city":"Los Ángeles",
+    "operator":"Disney",
+    "status":"active",
+    "timezone": "America/Los_Angeles",
+    "eventos": [
+      {
+        "nombre":"70th anniversary",
+        "desde":"2025-05-16",
+        "hasta":"2026-09-06"
+      }
+    ]
+  },
+  {
+    "slug":"disneylandcaliforniaadventure",
+    "name": "Disney California Adventure Park",
+    "entity_id": "832fcd51-ea19-4e77-85c7-75d5843b127c",
+    "continent":"North America",
+    "country":"United States",
+    "city":"Los Ángeles",
+    "operator":"Disney",
+    "status":"active",
+    "timezone": "America/Los_Angeles",
+    "eventos": [
+    ]
+  },
+  {
+    "slug":"universalstudiosflorida",
+    "name": "Universal Studios Florida",
+    "entity_id": "eb3f4560-2383-4a36-9152-6b3e5ed6bc57",
+    "continent":"North America",
+    "country":"United States",
+    "city":"Orlando",
+    "operator":"Universal",
+    "status":"active",
+    "timezone": "America/New_York",
+    "eventos": [
+      {
+        "nombre":"Mardi Gras",
+        "desde":"2026-02-07",
+        "hasta":"2026-04-04"
+      }
+    ]
+  },
+  {
+    "slug":"islandsofadventure",
+    "name": "Universal Islands of Adventure",
+    "entity_id": "267615cc-8943-4c2a-ae2c-5da728ca591f",
+    "continent":"North America",
+    "country":"United States",
+    "city":"Orlando",
+    "operator":"Universal",
+    "status":"active",
+    "timezone": "America/New_York",
+    "eventos": [
+      {
+        "nombre":"Butterbeer Season",
+        "desde":"2026-03-01",
+        "hasta":"2026-05-31"
+      }
+    ]
+  },
+  {
+    "slug":"epicuniverse",
+    "name": "Universal's Epic Universe",
+    "entity_id": "12dbb85b-265f-44e6-bccf-f1faa17211fc",
+    "continent":"North America",
+    "country":"United States",
+    "city":"Orlando",
+    "operator":"Universal",
+    "status":"active",
+    "timezone": "America/New_York",
+    "eventos": [
+    ]
+  },
+  {
+    "slug":"universalstudios",
+    "name": "Universal Studios",
+    "entity_id": "bc4005c5-8c7e-41d7-b349-cdddf1796427",
+    "continent":"North America",
+    "country":"United States",
+    "city":"Los Ángeles",
+    "operator":"Universal",
+    "status":"active",
+    "timezone": "America/Los_Angeles",
+    "eventos": [
+      {
+        "nombre":"Universal Fan Fest Nights",
+        "desde":"2026-04-23",
+        "hasta":"2026-05-16"
+      }
+    ]
+  },
+  {
+    "slug":"sixflagsmagicmountain",
+    "name": "Six Flags Magic Mountain",
+    "entity_id": "c6073ab0-83aa-4e25-8d60-12c8f25684bc",
+    "continent":"North America",
+    "country":"United States",
+    "city":"Los Ángeles",
+    "operator":"Six Flags",
+    "status":"active",
+    "timezone": "America/Los_Angeles",
+    "eventos": [
+      {
+        "nombre":"DC Heroes and Villains Fest",
+        "desde":"2026-06-19",
+        "hasta":"2026-07-25"
+      },
+      {
+        "nombre":"Tricks and Treats",
+        "desde":"2026-09-25",
+        "hasta":"2026-11-01"
+      },
+      {
+        "nombre":"Oktoberfest",
+        "desde":"2026-09-25",
+        "hasta":"2026-11-01"
+      },
+      {
+        "nombre":"Holiday in the Park",
+        "desde":"2026-11-26",
+        "hasta":"2027-01-03"
+      }
+    ]
+  },
+  {
+    "slug":"sixflagsgreatadventure",
+    "name": "Six Flags Great Adventure",
+    "entity_id": "556f0126-8082-4b66-aeee-1e3593fed188",
+    "continent":"North America",
+    "country":"United States",
+    "city":"Philadelphia",
+    "operator":"Six Flags",
+    "status":"active",
+    "timezone": "America/New_York",
+    "eventos": [
+    ]
+  },
+  {
+    "slug":"sixflagsovertexas",
+    "name": "Six Flags Over Texas",
+    "entity_id": "4535960b-45fb-49fb-a38a-59cf602a0a9c",
+    "continent":"North America",
+    "country":"United States",
+    "city":"Dallas",
+    "operator":"Six Flags",
+    "status":"active",
+    "timezone": "America/Chicago",
+    "eventos": [
+      {
+        "nombre":"Six Flags Over Texas 6th Anniversary",
+        "desde":"2026-02-28",
+        "hasta":"2026-12-31"
+      }
+    ]
+  },
+  {
+    "slug":"cedarpoint",
+    "name": "Cedar Point",
+    "entity_id": "c8299e1a-0098-4677-8ead-dd0da204f8dc",
+    "continent":"North America",
+    "country":"United States",
+    "city":"Ohio",
+    "operator":"Six Flags",
+    "status":"active",
+    "timezone": "America/New_York",
+    "eventos": [
+      {
+        "nombre":"Star-Spangled Celebration",
+        "desde":"2026-06-29",
+        "hasta":"2026-07-04"
+      },
+      {
+        "nombre":"Boardwalk Nights",
+        "desde":"2026-07-17",
+        "hasta":"2026-08-16"
+      },
+      {
+        "nombre":"HalloWeekedns",
+        "desde":"2026-09-17",
+        "hasta":"2026-11-01"
+      }
+    ]
+  },
+  {
+    "slug":"canadaswonderland",
+    "name": "Canada's Wonderland",
+    "entity_id": "66f5d97a-a530-40bf-a712-a6317c96b06d",
+    "continent":"North America",
+    "country":"Canada",
+    "city":"Toronto",
+    "operator":"Six Flags",
+    "status":"active",
+    "timezone": "America/Toronto",
+    "eventos": [
+    ]
+  },
+  {
+    "slug":"knottsberryfarm",
+    "name": "Knott's Berry Farm",
+    "entity_id": "0a6123bb-1e8c-4b18-a2d3-2696cf2451f5",
+    "continent":"North America",
+    "country":"United States",
+    "city":"Los Ángeles",
+    "operator":"Six Flags",
+    "status":"active",
+    "timezone": "America/Los_Angeles",
+    "eventos": [
+      {
+        "nombre":"Knott's PEANUTS Celebration",
+        "desde":"2026-01-31",
+        "hasta":"2026-02-22"
+      },
+      {
+        "nombre":"Knott's Boysenberry Festival",
+        "desde":"2026-03-13",
+        "hasta":"2026-04-12"
+      },
+      {
+        "nombre":"Ghost Town Alive!",
+        "desde":"2026-06-12",
+        "hasta":"2026-08-30"
+      },
+      {
+        "nombre":"Knott's Sacry Farm",
+        "desde":"2026-09-17",
+        "hasta":"2026-10-31"
+      },
+      {
+        "nombre":"Knott's Merry Farm",
+        "desde":"2026-11-20",
+        "hasta":"2027-01-03"
+      }
+    ]
+  },
+  {
+    "slug":"seaworldorlando",
+    "name": "SeaWorld Orlando",
+    "entity_id": "27d64dee-d85e-48dc-ad6d-8077445cd946",
+    "continent":"North America",
+    "country":"United States",
+    "city":"Orlando",
+    "operator":"SeaWorld",
+    "status":"active",
+    "timezone": "America/New_York",
+    "eventos": [
+      {
+        "nombre":"Inside Look",
+        "desde":"2026-01-10",
+        "hasta":"2026-03-18"
+      },
+      {
+        "nombre":"Elmo's Birthday",
+        "desde":"2026-01-27",
+        "hasta":"2026-02-03"
+      },
+      {
+        "nombre":"Seven Seas Food Festival",
+        "desde":"2026-01-30",
+        "hasta":"2026-05-17"
+      },
+      {
+        "nombre":"Halloween Spooktacular",
+        "desde":"2026-08-29",
+        "hasta":"2026-11-01"
+      },
+      {
+        "nombre":"Chirstmas Celebration",
+        "desde":"2026-11-06",
+        "hasta":"2027-01-03"
+      }
+    ]
+  },
+  {
+    "slug":"buschgardens",
+    "name": "Busch Gardens Tampa",
+    "entity_id": "fc40c99a-be0a-42f4-a483-1e939db275c2",
+    "continent":"North America",
+    "country":"United States",
+    "city":"Tampa",
+    "operator":"Busch Gardens",
+    "status":"active",
+    "timezone": "America/New_York",
+    "eventos": [
+      {
+        "nombre":"Real Music Series",
+        "desde":"2026-01-05",
+        "hasta":"2026-02-20"
+      },
+      {
+        "nombre":"Food, Wine & Garden Festival",
+        "desde":"2026-03-06",
+        "hasta":"2026-05-10"
+      },
+      {
+        "nombre":"Halloween Spooktacular",
+        "desde":"2026-09-05",
+        "hasta":"2026-11-01"
+      },
+      {
+        "nombre":"Christmas Town",
+        "desde":"2026-11-13",
+        "hasta":"2027-01-05"
+      }
+    ]
+  },
+  {
+    "slug":"hersheypark",
+    "name": "Hersheypark",
+    "entity_id": "0f044655-cd94-4bb8-a8e3-c789f4eca787",
+    "continent":"North America",
+    "country":"United States",
+    "city":"Hershey",
+    "operator":"Independent",
+    "status":"active",
+    "timezone": "America/New_York",
+    "eventos": [
+      {
+        "nombre":"Spring Weekends",
+        "desde":"2026-03-05",
+        "hasta":"2026-05-18"
+      }
+    ]
+  },
+  {
+    "slug":"dollywood",
+    "name": "Dollywood",
+    "entity_id": "7502308a-de08-41a3-b997-961f8275ab3c",
+    "continent":"North America",
+    "country":"United States",
+    "city":"Tennessee",
+    "operator":"Independent",
+    "status":"active",
+    "timezone": "America/New_York",
+    "eventos": [
+      {
+        "nombre":"I Will Always Love You Music Festival",
+        "desde":"2026-03-14",
+        "hasta":"2026-04-13"
+      },
+      {
+        "nombre":"Flower & Food Festival",
+        "desde":"2026-04-18",
+        "hasta":"2026-06-08"
+      },
+      {
+        "nombre":"Smoky Mountains Summer Celebration",
+        "desde":"2026-06-15",
+        "hasta":"2026-08-02"
+      },
+      {
+        "nombre":"Harvest Festival",
+        "desde":"2026-09-14",
+        "hasta":"2026-10-31"
+      },
+      {
+        "nombre":"Smoky Mountains Christmas",
+        "desde":"2026-11-06",
+        "hasta":"2027-01-03"
+      }
+    ]
+  },
+  {
+    "slug":"tokyodisneysea",
+    "name": "Tokyo Disney Sea",
+    "entity_id": "67b290d5-3478-4f23-b601-2f8fb71ba803",
+    "continent":"Asia",
+    "country":"Japan",
+    "city":"Tokyo",
+    "operator":"Disney",
+    "status":"active",
+    "timezone": "Asia/Tokyo",
+    "eventos": [
+      {
+        "nombre":"Food & Wine Festival",
+        "desde":"2026-04-15",
+        "hasta":"2026-06-30"
+      }
+    ]
+  },
+  {
+    "slug":"disneyshanghai",
+    "name": "Shanghai Disneyland",
+    "entity_id": "ddc4357c-c148-4b36-9888-07894fe75e83",
+    "continent":"Asia",
+    "country":"China",
+    "city":"Shanghai",
+    "operator":"Disney",
+    "status":"active",
+    "timezone": "Asia/Shanghai",
+    "eventos": [
+      {
+        "nombre":"New Year at Tokyo Disney Resort",
+        "desde":"2026-01-01",
+        "hasta":"2026-01-12"
+      },
+      {
+        "nombre":"Sparkling Jubilee",
+        "desde":"2026-04-15",
+        "hasta":"2027-03-31"
+      }
+    ]
+  },
+  {
+    "slug":"disneyhongkong",
+    "name": "Hong Kong Disneyland Park",
+    "entity_id": "bd0eb47b-2f02-4d4d-90fa-cb3a68988e3b",
+    "continent":"Asia",
+    "country":"Hong Kong",
+    "city":"Hong Kong",
+    "operator":"Disney",
+    "status":"active",
+    "timezone": "Asia/Hong_Kong",
+    "eventos": [
+    ]
+  },
+  {
+    "slug":"warneraustralia",
+    "name": "Warner Bros Movie World",
+    "entity_id": "306b4975-5828-4a28-8ab0-ee7241c53f81",
+    "continent":"Oceania",
+    "country":"Australia",
+    "city":"Brisbane",
+    "operator":"Warner",
+    "status":"active",
+    "timezone": "Australia/Brisbane",
+    "eventos": [
+      {
+        "nombre":"Hooray for Hollywood Returns",
+        "desde":"2026-01-02",
+        "hasta":"2026-01-18"
+      }
+    ]
+  },
+  {
+    "slug":"sixflagsqiddiya",
+    "name": "Six Flags Qiddiya City",
+    "entity_id": "324a4b89-e6c6-47d8-aeb4-aa8aea1fd578",
+    "continent":"Asia",
+    "country":"Saudi Arabia",
+    "city":"Qiddya",
+    "operator":"Six Flags",
+    "status":"active",
+    "timezone": "Asia/Riyadh",
+    "eventos": []
+  },
+  {
+    "slug":"cedarpoint",
+    "name": "Cedar Point",
+    "entity_id": "c8299e1a-0098-4677-8ead-dd0da204f8dc",
+    "continent":"America",
+    "country":"United States",
+    "city":"Sandusky",
+    "operator":"Six Flags",
+    "status":"active",
+    "timezone": "America/New_York",
+    "eventos": [
+      {
+        "nombre":"Star-Spangled Celebration",
+        "desde":"2026-06-29",
+        "hasta":"2026-07-04"
+      },
+      {
+        "nombre":"HalloWeekends",
+        "desde":"2026-09-17",
+        "hasta":"2026-11-01"
+      }
+    ]
+  }
+]

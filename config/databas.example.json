@@ -1,0 +1,7 @@
+{
+    "host": "your_host",
+    "port": 5432,
+    "database": "theme_parks",
+    "user": "postgres",
+    "password": "your_password"
+}
